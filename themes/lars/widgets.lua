@@ -10,7 +10,7 @@ local lain              = require("lain")
 
 
 -- beautiful init
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-darker/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/lars/theme.lua")
 
 
 local Widgets = {}
