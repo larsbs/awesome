@@ -8,7 +8,7 @@
 theme                               = {}
 
 themes_dir                          = os.getenv("HOME") .. "/.config/awesome/themes/lars"
-theme.wallpaper                     = themes_dir .. "/wall.jpg"
+theme.wallpaper                     = themes_dir .. "/walls/wall.jpg"
 
 theme.wibox_height                  = 20
 
