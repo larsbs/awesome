@@ -39,7 +39,7 @@ fn.run_once("numlockx on")
 -- VARIABLE DEFINITIONS
 
 -- localization
-os.setlocale(os.getenv("LANG"))
+-- os.setlocale(os.getenv("LANG"))
 
 -- beautiful init
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/lars/theme.lua")
@@ -209,8 +209,8 @@ clientbuttons = awful.util.table.join(
     awful.button({ modkey }, 3, awful.mouse.client.resize)
 )
 
--- KEY BINDINGS 
-globalkeys = awful.util.table.join( 
+-- KEY BINDINGS
+globalkeys = awful.util.table.join(
     -- Take a screenshot
     awful.key({ altkey }, "p", fn.take_screenshot),
 
