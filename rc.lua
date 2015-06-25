@@ -47,7 +47,7 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/lars/theme.lua")
 -- wallpaper
 if beautiful.wallpaper then
     for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+        gears.wallpaper.maximized(beautiful.wallpaper, s, false)
     end
 end
 
@@ -369,6 +369,13 @@ awful_rules.rules = {
     {
         rule = { class = "Gimp" },
         properties = { }
+    },
+    {
+        rule = { class = "gvim" },
+        properties = {
+            maximized_horizontal = true,
+            maximized_vertical = true
+        }
     },
     {
         rule = { class = "Gimp", role = "gimp-image-window" },
