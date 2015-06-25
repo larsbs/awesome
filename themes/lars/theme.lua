@@ -1,7 +1,7 @@
 --[[
 
-     Powerarrow Darker Awesome WM config 2.0
-     github.com/copycat-killer
+     Larsbs Awesome WM config
+     github.com/larsbs
 
 --]]
 
@@ -12,8 +12,12 @@ theme.wallpaper                     = themes_dir .. "/walls/wall.png"
 
 theme.wibox_height                  = 20
 
-theme.primary_color_saturated       = "#C06ED1" --"#8B99CC"
-theme.primary_color                 = "#8F459B" --"#474E68"
+--theme.primary_color_saturated       = "#C06ED1" -- Purple
+--theme.primary_color_saturated       = "#8B99CC" -- Blue
+theme.primary_color_saturated       = "#639fce" -- Blue
+--theme.primary_color                 = "#8F459B" -- Purple
+--theme.primary_color                 = "#474E68" -- Blue
+theme.primary_color                 = "#0C75C9" -- Blue
 
 -- Text
 theme.font                          = "Terminus 9"
@@ -27,7 +31,7 @@ theme.bg_urgent                     = "#1A1A1A"
 -- Borders
 theme.border_width                  = "1"
 theme.border_normal                 = "#AAAAAA"
-theme.border_focus                  = "#C06ED1"
+theme.border_focus                  = theme.primary_color_saturated
 theme.border_marked                 = "#CC9393"
 
 -- Titlebar

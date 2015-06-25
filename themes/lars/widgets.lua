@@ -15,8 +15,8 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/lars/theme.lua")
 
 local Widgets = {}
 
-local primary_color_saturated = "#C06ED1"
-local primary_color = "#8F459B"
+local primary_color_saturated = beautiful.primary_color_saturated
+local primary_color = beautiful.primary_color
 
 -- TEXTCLOCK
 weekday = lain.util.markup(primary_color_saturated, " %a")
