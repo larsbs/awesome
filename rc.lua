@@ -70,16 +70,15 @@ musicplr   = terminal .. " -g 130x34-320+16 -e ncmpcpp "
 local layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.bottom,
     awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.max,
 }
 
 
 -- TAGS
 tags = {
     names = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 "},
-    layout = { layouts[1], layouts[1], layouts[1], layouts[1], layouts[1] }
+    layout = { layouts[1], layouts[4], layouts[1], layouts[1], layouts[1] }
 }
 
 for s = 1, screen.count() do
@@ -244,8 +243,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "j",       fn.previous_screen),
     awful.key({ modkey,           }, "u",       awful.client.urgent.jumpto),
     awful.key({ modkey,           }, "Tab",     fn.toggle_client),
-    awful.key({ modkey,           }, "space",   fn.next_layout),
-    awful.key({ modkey, "Shift"   }, "space",   fn.previous_layout),
+    awful.key({ modkey,           }, "space",   function () fn.next_layout(layouts) end),
+    awful.key({ modkey, "Shift"   }, "space",   function () fn.previous_layout(layouts) end),
     awful.key({ modkey, "Control" }, "n",       awful.client.restore),
 
     -- Standard program
@@ -371,10 +370,9 @@ awful_rules.rules = {
         properties = { }
     },
     {
-        rule = { class = "gvim" },
+        rule = { class = "Gvim" },
         properties = {
-            maximized_horizontal = true,
-            maximized_vertical = true
+            size_hints_honor = false
         }
     },
     {
