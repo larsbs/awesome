@@ -99,13 +99,12 @@ lain.widgets.calendar:attach(textclock, { font_size = 10 })
 
 -- MEM
 memwidget = widgets.mem
-memicon = widgets.mem.icon
 
 -- CPU
 cpuwidget = widgets.cpu
 
 -- Volume
-volumewidget = widgets.vol
+volwidget = widgets.vol
 
 -- Battery
 batterywidget = widgets.battery
@@ -179,14 +178,14 @@ for s = 1, screen.count() do
     if s == 1 then
         right_layout:add(wibox.widget.systray())
     end
-    right_layout:add(widgets.mem.icon)
-    right_layout:add(widgets.mem)
-    right_layout:add(widgets.cpu.icon)
-    right_layout:add(widgets.cpu)
-    right_layout:add(widgets.net.icon)
-    right_layout:add(widgets.net)
-    right_layout:add(widgets.vol.icon)
-    right_layout:add(widgets.vol)
+    right_layout:add(memwidget.icon)
+    right_layout:add(memwidget)
+    right_layout:add(cpuwidget.icon)
+    right_layout:add(cpuwidget)
+    right_layout:add(netwidget.icon)
+    right_layout:add(netwidget)
+    right_layout:add(volwidget.icon)
+    right_layout:add(volwidget)
     right_layout:add(textclock)
     right_layout:add(mylayoutbox[s])
 
