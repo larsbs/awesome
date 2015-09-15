@@ -8,8 +8,8 @@ local beautiful         = require("beautiful")
 local naughty           = require("naughty")
 local drop              = require("scratchdrop")
 local lain              = require("lain")
-local widgets           = require("themes/lars/widgets")
-local fn                = require("themes/lars/functions")
+local widgets           = require("themes/lars-icons/widgets")
+local fn                = require("themes/lars-icons/functions")
 
 
 -- ERROR HANDLING
@@ -42,7 +42,7 @@ fn.run_once("numlockx on")
 -- os.setlocale(os.getenv("LANG"))
 
 -- beautiful init
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/lars/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/lars-icons/theme.lua")
 
 -- wallpaper
 if beautiful.wallpaper then
@@ -99,12 +99,13 @@ lain.widgets.calendar:attach(textclock, { font_size = 10 })
 
 -- MEM
 memwidget = widgets.mem
+memicon = widgets.mem.icon
 
 -- CPU
 cpuwidget = widgets.cpu
 
 -- Volume
-volumewidget = widgets.volume
+volumewidget = widgets.vol
 
 -- Battery
 batterywidget = widgets.battery
@@ -178,10 +179,14 @@ for s = 1, screen.count() do
     if s == 1 then
         right_layout:add(wibox.widget.systray())
     end
-    right_layout:add(memwidget)
-    right_layout:add(cpuwidget)
-    right_layout:add(netwidget)
-    right_layout:add(volumewidget)
+    right_layout:add(widgets.mem.icon)
+    right_layout:add(widgets.mem)
+    right_layout:add(widgets.cpu.icon)
+    right_layout:add(widgets.cpu)
+    right_layout:add(widgets.net.icon)
+    right_layout:add(widgets.net)
+    right_layout:add(widgets.vol.icon)
+    right_layout:add(widgets.vol)
     right_layout:add(textclock)
     right_layout:add(mylayoutbox[s])
 
