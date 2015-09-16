@@ -165,25 +165,25 @@ end
 -- Raise volume
 Functions.raise_volume = function ()
     awful.util.spawn("amixer -q set Master 1%+")
-    volumewidget.update()
+    volwidget.update()
 end
 
 -- Lower volume
 Functions.lower_volume = function ()
     awful.util.spawn("amixer -q set Master 1%-")
-    volumewidget.update()
+    volwidget.update()
 end
 
 -- Mute volume
 Functions.mute_volume = function ()
     awful.util.spawn("amixer -q set Master playback toggle")
-    volumewidget.update()
+    volwidget.update()
 end
 
 -- Max volume
 Functions.max_volume = function ()
     awful.util.spawn("amixer -q set Master playback 100%")
-    volumewidget.update()
+    volwidget.update()
 end
 
 
