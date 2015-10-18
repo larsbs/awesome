@@ -110,7 +110,7 @@ cpuwidget = widgets.cpu
 volwidget = widgets.vol
 
 -- Battery
-batterywidget = widgets.battery
+batterywidget = widgets.bat
 
 -- Network
 netwidget = widgets.net
