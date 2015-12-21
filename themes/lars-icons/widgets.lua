@@ -69,7 +69,7 @@ function battery_settings_function()
 
     widget:set_markup(lain.util.markup(primary_color_saturated, header) .. bat_percent .. " ")
 end
-Widgets.battery = lain.widgets.bat({ settings = battery_settings_function })
+Widgets.bat = lain.widgets.bat({ settings = battery_settings_function })
 
 -- NETWORK
 function network_settings_function()
