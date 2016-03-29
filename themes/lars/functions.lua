@@ -85,14 +85,22 @@ end
 -- Take screenshot
 -- This function is based in "scripts/screenshot.sh"
 Functions.take_screenshot = function ()
-    --os.execute("sh ../screenshot")
     os.execute([[bash <<"EOF"
-        timestamp="$(date +%Y%m%d%H%M%S)"
+        timestamp="$(date +%Y%m%d-%H%M%S)"
         targetbase="$HOME/Imágenes/Screenshots"
         mkdir -p $targetbase
         [ -d $targetbase ] || exit 1
-        scrot $targetbase/$timestamp.png
+        maim --format=png $targetbase/$timestamp.png
     ]])
+end
+
+-- Take screenshot of section of screen
+Functions.take_partial_screenshot = function ()
+    os.execute([[bash <<"EOF"
+        timestamp="$(date +%Y%m%d-%H%M%S)"
+        maim $HOME/$timestamp.png -s -b 2 -c '255,0,0,1'
+    ]])
+    --os.execute("maim -s")
 end
 
 -- Go to previous client by id
