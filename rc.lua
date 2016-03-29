@@ -35,7 +35,7 @@ end
 fn.run_once("urxvtd")
 fn.run_once("unclutter")
 fn.run_once("compton")
-fn.run_once("xrandr --output VGA1 --mode 1440x900 --right-of LVDS1")
+fn.run_once("xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1")
 fn.run_once("numlockx on")
 
 
