@@ -219,7 +219,7 @@ clientbuttons = awful.util.table.join(
 globalkeys = awful.util.table.join(
     -- Take a screenshot
     awful.key({ altkey }, "p", fn.take_screenshot),
-    awful.key({ altkey, "Shift" }, "p", fn.take_partial_screenshot),
+    awful.key({ altkey, "Shift" }, "4", fn.take_partial_screenshot),
 
     -- Tag browsing
     awful.key({ modkey }, "Left",   awful.tag.viewprev),
